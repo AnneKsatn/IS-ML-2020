@@ -1,14 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 import torch
-
-
-# In[3]:
-
 
 class LeNet5(torch.nn.Module):
     def __init__(self):
@@ -31,6 +27,7 @@ class LeNet5(torch.nn.Module):
         self.act4  = torch.nn.Tanh()
         
         self.fc3   = torch.nn.Linear(84, 10)
+        self.act5  = torch.nn.Softmax(dim = 1)
     
     def forward(self, x):
         
@@ -49,6 +46,7 @@ class LeNet5(torch.nn.Module):
         x = self.fc2(x)
         x = self.act4(x)
         x = self.fc3(x)
+        x = self.act5(x)
         
         return x
 

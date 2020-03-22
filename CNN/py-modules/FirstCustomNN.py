@@ -1,14 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
+# In[1]:
 
 
 import torch
-
-
-# In[6]:
-
 
 class FirstCustomNN(torch.nn.Module):
     def __init__(self):  

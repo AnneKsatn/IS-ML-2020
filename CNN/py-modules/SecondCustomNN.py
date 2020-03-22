@@ -6,10 +6,6 @@
 
 import torch
 
-
-# In[4]:
-
-
 class Custom_2(torch.nn.Module):
     def __init__(self):
         super(Custom_2, self).__init__()
